@@ -139,20 +139,21 @@ class Bot:
                                 print('no query box')
                                 continue
                             try:
-                                check_username = self.driver.find_element(
-                                    By.XPATH, '/html/body/div[6]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/div')
-                                if check_username.text == target_user:
-                                    check_username.click()
-                                    time.sleep(5)
-                                else:
-                                    check_username.click()
-                                    time.sleep(5)
+                                self.driver.find_element(
+                                    By.XPATH, '/html/body/div[5]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/div').click()
+                                time.sleep(2)
+                                # if check_username.text == target_user:
+                                #     check_username.click()
+                                #     time.sleep(5)
+                                # else:
+                                #     check_username.click()
+                                #     time.sleep(5)
                             except:
                                 print('no check username')
                                 continue
                             try:
                                 self.driver.find_element(
-                                    By.XPATH, '/html/body/div[6]/div/div/div[2]/div[4]/button').click()
+                                    By.XPATH, '/html/body/div[5]/div/div/div[2]/div[4]/button').click()
                                 time.sleep(3)
                             except:
                                 print('no submit button')
